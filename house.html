@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Two Storey House - Flat Roof</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+</head>
+
+<body>
+<a-scene background="color: #87CEEB">
+<a-assets>
+  <img id="grassTexture" src="Assets/grass.png">
+  <img id="wallTex" src="assets/wall.jpg">
+    <img id="roofTex" src="assets/roof.jpg">
+    <img id="floorTex" src="Assets/floortext2.jpg">
+    <img id="walltex" src="Assets/walltext.jpg">
+    <img id="extwall" src="Assets/gareth-david-KREQ7J7nsNw-unsplash.jpg">
+  
+    <a-asset-item id="treeModel" src="Assets/Pine.glb"></a-asset-item>
+    <a-asset-item id="glassdoor" src="Assets/Windows.glb"></a-asset-item>
+    <a-asset-item id="car1" src="Assets/Rolls Royce.glb"></a-asset-item>
+    <a-asset-item id="bookshelf" src="Assets/Bookshelf.glb"></a-asset-item>
+    <a-asset-item id="motorbike" src="Assets/Motorcycle.glb"></a-asset-item>
+    <a-asset-item id="kitchen" src="Assets/Kitchen.glb"></a-asset-item>
+    <a-asset-item id="bed" src="Assets/Bed.glb"></a-asset-item>
+    <a-asset-item id="sofa" src="Assets/Sofa.glb"></a-asset-item>
+    <a-asset-item id="coffeetable" src="Assets/CoffeeTable.glb"></a-asset-item>
+    <a-asset-item id="officedesk" src="Assets/Desk.glb"></a-asset-item>
+    <a-asset-item id="tv" src="Assets/Tv.glb"></a-asset-item>
+    <a-asset-item id="wallart" src="Assets/WallArt.glb"></a-asset-item>
+    <a-asset-item id="diningset" src="Assets/DiningSet.glb"></a-asset-item>
+    <a-asset-item id="spacebar" src="Assets/SpaceBar.glb"></a-asset-item>
+    <a-asset-item id="pooltable" src="Assets/PoolTable.glb"></a-asset-item>
+    <a-asset-item id="basketballcourt" src="Assets/Basketball court.glb"></a-asset-item>
+    <a-asset-item id="fence" src="Assets/Fence.glb"></a-asset-item>
+    <a-asset-item id="pathway" src="Assets/Rock Path Square Thin.glb"></a-asset-item>
+    <a-asset-item id="umbrellandchairs" src="Assets/Umbrella and chairs.glb"></a-asset-item>
+    <a-asset-item id="stairs" src="Assets/Stair case.glb"></a-asset-item>
+    <a-asset-item id="stairs" src="Assets/Stair case.glb"></a-asset-item>
+    <a-asset-item id="bunkbed" src="Assets/Bunk Bed.glb"></a-asset-item>
+    <a-asset-item id="cockpit" src="Assets/cockpit.glb"></a-asset-item>
+    <a-asset-item id="wardrobe" src="Assets/Closet.glb"></a-asset-item>
+    <a-asset-item id="door" src="Assets/Doorway Front.glb"></a-asset-item>
+    <a-asset-item id="gate" src="Assets/Graveyard Gate.glb"></a-asset-item>
+
+
+
+
+
+</a-assets>
+
+
+
+  <!-- Camera with movement -->
+  <a-entity position="50 5 30">
+    <a-camera wasd-controls look-controls qe-controls="speed: 4">
+    </a-camera>
+  </a-entity>
+  <a-camera position="0 10 60" qe-controls="speed: 4">
+   <a-cursor></a-cursor>
+</a-camera>
+
+  <!-- Floor -->
+  <a-box position="0 0.1 0"
+       width="50"
+       height="1"
+       depth="40"
+       material="src: #floorTex; repeat: 10 8">
+</a-box>
+
+
+
+
+
+<!-- ================================================= -->
+
+   <a-box position="0 6 15"
+       width="50"
+         height="0"
+       depth="0.2"
+     c material="src:#walltex ; repeat: 20 20">
+</a-box>
+<a-box position="-25 6 -2"
+       width="0.2"
+       height="29"
+       depth="37.5"
+       c material="src:#walltex ; repeat: 20 20">
+</a-box>
+<a-box position="25 6 -2"
+       width="0.2"
+       height="29"
+       depth="37.5"
+       c material="src:#walltex ; repeat: 20 20">
+</a-box>
+<a-entity position="0 0 0" rotation="0 180 0">
+
+  <a-box position="-14 15 0"
+         width="22"
+         height="10"
+         depth="0.3"
+         c material="src:#walltex ; repeat: 20 20">
+  </a-box>
+  <a-box position="14 15 0"
+         width="22"
+         height="10"
+         depth="0.3"
+         c material="src:#walltex ; repeat: 20 20">
+
+  
+
+</a-entity>
+
+
+  
+  
+  <!-- Flat Roof -->
+  <a-box position="0 10 -3" width="50" height="0.2" depth="45" color="#444444"></a-box>
+  <a-box position="0 20 -3" width="50" height="0.2" depth="45" color="#444444"></a-box>
+<a-plane
+  position="0 0 0"
+  rotation="-90 0 0"
+  width="200"
+  height="200"
+  material="src: #grassTexture; repeat: 20 20">
+</a-plane>
+<a-entity gltf-model="#treeModel" position="-40 0 -48" scale="2 2 2"></a-entity>
+<a-entity gltf-model="#treeModel" position="0 0 -48" scale="2 2 2"></a-entity>
+<a-entity gltf-model="#treeModel" position="40 0 -48" scale="2 2 2"></a-entity>
+<a-entity gltf-model="#treeModel" position="-48 0 -40" scale="2 2 2"></a-entity>
+<a-entity gltf-model="#treeModel" position="-48 0 0" scale="2 2 2"></a-entity>
+<a-entity gltf-model="#treeModel" position="-48 0 40" scale="2 2 2"></a-entity>
+<a-entity gltf-model="#treeModel" position="48 0 -40" scale="2 2 2"></a-entity>
+<a-entity gltf-model="#treeModel" position="48 0 0" scale="2 2 2"></a-entity>
+<a-entity gltf-model="#treeModel" position="48 0 40" scale="2 2 2"></a-entity>
+
+
+<a-box position="32 0 11"
+       width="16.9"
+       height="0.1"
+       depth="15"
+       color="#444444">
+</a-box>
+
+<!-- ===== GARAGE BACK WALL ===== -->
+<a-box position="33 3 3.5"
+       width="16"
+       height="6"
+       depth="0.2"
+       color="#ffffff">
+</a-box>
+
+<!-- ===== GARAGE RIGHT WALL ===== -->
+<a-box position="40.5 3 11"
+       width="0.2"
+       height="6"
+       depth="15"
+       color="#ffffff">
+</a-box>
+
+<!-- ===== GARAGE FRONT TOP WALL (Above Door Opening) ===== -->
+<a-box position="33.5 6 11"
+       width="17"
+       height="0.2"
+       depth="17"
+       color="#444444">
+</a-box>
+
+
+<a-animation 
+    attribute="position"
+    to="22 6 7.5"
+    begin="garageDoor.click"
+    dur="1200">
+</a-animation>
+
+<a-entity 
+    gltf-model="#glassdoor"
+    position="-13 15 17"
+    scale="-11 3.8 0"
+    rotation="0 180 0">
+</a-entity>
+<a-entity 
+    gltf-model="#glassdoor"
+    position="13 15 16.8"
+    scale="11 3.8 0"
+    rotation="0 180 0">
+</a-entity>
+<a-entity 
+    gltf-model="#glassdoor"
+    position="13 15 -20"
+    scale="11 3.8 0"
+    rotation="0 180 0">
+</a-entity>
+<a-entity 
+    gltf-model="#glassdoor"
+    position="-13.6 15 -20"
+    scale="11 3.8 0"
+    rotation="0 180 0">
+</a-entity>
+
+<a-light type="ambient" intensity="1.2"></a-light>
+<a-light type="directional" position="5 10 5" intensity="1.5"></a-light>
+
+<a-entity
+    gltf-model="#bookshelf"
+    position="20 15 1.3"
+    scale="2 1 2"
+    rotation="0 180 0">
+</a-entity>
+<a-entity
+  gltf-model="#car1"
+  position="33 2.5 17"
+  scale="0.09 0.09 0.09">
+</a-entity>
+<a-entity
+  gltf-model="#bed"
+  position="20 10 8"
+  scale="4 4 4"
+   rotation="0 270 0">
+</a-entity>
+<a-entity
+  gltf-model="#bed"
+  position="-20 10 7"
+  scale="4 4 4"
+   rotation="0 90 0">
+</a-entity>
+<a-entity
+  gltf-model="#cockpit"
+  position="-5 14 -10"
+  scale="2 2 2"
+   rotation="0 90 0">
+</a-entity>
+<a-entity
+  gltf-model="#wardrobe"
+  position="-20 10 1.5"
+  scale="3 3 3"
+   rotation="0 360 0">
+</a-entity>
+<a-entity
+  gltf-model="#wardrobe"
+  position="22 10 13"
+  scale="3 3 3"
+   rotation="0 270 0">
+</a-entity>
+<a-entity
+  gltf-model="#wardrobe"
+  position="-22 10 -13"
+  scale="3 3 3"
+   rotation="0 90 0">
+</a-entity>
+<a-entity
+  gltf-model="#stairs"
+  position="0 0 -14"
+  scale="0.1 0.15 0.1">
+</a-entity>
+<a-entity
+  gltf-model="#door"
+  position="0 0 16.5"
+  scale="8 8 8">
+</a-entity>
+<a-entity
+  gltf-model="#gate"
+  position="1 5 63"
+  scale="2 2 2"
+  rotation=" 0 180 0">
+</a-entity>
+<a-entity
+  gltf-model="#motorbike"
+  position="20 0 30"
+  scale="0.05 0.05 0.05"
+   rotation="0 90 0">
+</a-entity>
+<a-entity
+  gltf-model="#kitchen"
+  position="-16.5 2.8 -14.8"
+  scale="9 3.5 10"
+   rotation="0 360 0">
+</a-entity>
+<a-entity
+  gltf-model="#spacebar"
+  position="-23.5 4 10"
+  scale="3.5 3.5 3.5"
+   rotation="0 360 0">
+</a-entity>
+<a-entity
+  gltf-model="#diningset"
+  position="-53 0 35"
+  scale="0.12 0.12 0.12"
+   rotation="0 360 0">
+</a-entity>
+<a-entity
+  gltf-model="#pooltable"
+  position="0 0 15"
+  scale="3.5 3.5 3.5"
+   rotation="0 90 0">
+</a-entity>
+<a-entity
+  gltf-model="#umbrellandchairs"
+  position="-36 6 50"
+  scale="0.03 0.03 0.03"
+   rotation="0 90 0">
+</a-entity>
+<a-entity
+  gltf-model="#umbrellandchairs"
+  position="-36 6 30"
+  scale="0.03 0.03 0.03"
+   rotation="0 90 0">
+</a-entity>
+
+<a-entity
+  gltf-model="#sofa"
+  position="18 0 -15"
+  scale="3 3 3"
+   rotation="0 360 0">
+</a-entity>
+<a-entity
+  gltf-model="#bunkbed"
+  position="-20 10 -5"
+  scale="2 2 2">
+</a-entity>
+<a-entity
+  gltf-model="#sofa"
+  position="18 0 10"
+  scale="3 3 3"
+   rotation="0 180 0">
+</a-entity>
+<a-entity
+  gltf-model="#sofa"
+  position="7 0 0"
+  scale="3 3 3"
+   rotation="0 90 0">
+</a-entity>
+<a-entity
+  gltf-model="#coffeetable"
+  position="17 0 -3"
+  scale="8 8 8"
+   rotation="0 90 0">
+</a-entity>
+
+<a-entity
+  gltf-model="#officedesk"
+  position="2.9 10 12"
+  scale="3 3 3"
+   rotation="0 180 0">
+</a-entity>
+<a-entity
+  gltf-model="#officedesk"
+  position="-2.9 10 12"
+  scale="3 3 3"
+   rotation="0 360 0">
+</a-entity>
+<a-entity
+  gltf-model="#tv"
+  position="24.8 5 -1"
+  scale="4 4 4"
+   rotation="0 270 0">
+</a-entity>
+<!-- ===== GLASS BALCONY ON TOP FLOOR ===== -->
+<!-- Balcony Floor -->
+<a-plane
+  position="0 20 20"
+  rotation="-90 0 0"
+  width="25"
+  height="8"
+  material="color: #87CEEB; opacity: 0.5; transparent: true">
+</a-plane>
+
+<!-- Front Glass Railing -->
+<a-box
+  position="-20 12 19"
+  width="10"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+<a-box
+  position="-9 12 19"
+  width="10"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+<a-box
+  position="2 12 19"
+  width="10"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+<a-box
+  position="13 12 19"
+  width="10"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+<a-box
+  position="22 12 19"
+  width="5"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+
+
+
+
+
+<!-- Back Glass Railing - Segmented with Black Poles -->
+<!-- Back Glass Panel 1 -->
+<a-box
+  position="-20 12 -25"
+  width="10"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+
+<!-- Back Black Pole 1 -->
+<a-box
+  position="-15 12 -25"
+  width="0.5"
+  height="3"
+  depth="0.3"
+  material="color: #000000">
+</a-box>
+
+<!-- Back Glass Panel 2 -->
+<a-box
+  position="-9 12 -25"
+  width="10"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+
+<!-- Back Black Pole 2 -->
+<a-box
+  position="-4 12 -25"
+  width="0.5"
+  height="3"
+  depth="0.3"
+  material="color: #000000">
+</a-box>
+
+<!-- Back Glass Panel 3 -->
+<a-box
+  position="2 12 -25"
+  width="10"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+
+<!-- Back Black Pole 3 -->
+<a-box
+  position="7 12 -25"
+  width="0.5"
+  height="3"
+  depth="0.3"
+  material="color: #000000">
+</a-box>
+
+<!-- Back Glass Panel 4 -->
+<a-box
+  position="13 12 -25"
+  width="10"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+
+<!-- Back Black Pole 4 -->
+<a-box
+  position="18 12 -25"
+  width="0.5"
+  height="3"
+  depth="0.3"
+  material="color: #000000">
+</a-box>
+
+<!-- Back Glass Panel 5 -->
+<a-box
+  position="22 12 -25"
+  width="5"
+  height="3"
+  depth="0.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+
+<!-- Front Black Poles -->
+<!-- Front Black Pole 1 -->
+<a-box
+  position="-15 12 19"
+  width="0.5"
+  height="3"
+  depth="0.3"
+  material="color: #000000">
+</a-box>
+
+<!-- Front Black Pole 2 -->
+<a-box
+  position="-4 12 19"
+  width="0.5"
+  height="3"
+  depth="0.3"
+  material="color: #000000">
+</a-box>
+
+<!-- Front Black Pole 3 -->
+<a-box
+  position="7 12 19"
+  width="0.5"
+  height="3"
+  depth="0.3"
+  material="color: #000000">
+</a-box>
+
+<!-- Front Black Pole 4 -->
+<a-box
+  position="18 12 19"
+  width="0.5"
+  height="3"
+  depth="0.3"
+  material="color: #000000">
+</a-box>
+
+
+
+
+
+<a-box
+  position="24.5 12 19"
+  width="0.3"
+  height="3"
+  depth="0.5"
+  material="color: #000000">
+</a-box>
+
+<a-box
+  position="25 12 18"
+  width="0.2"
+  height="3"
+  depth="2.5"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+<a-box
+  position="-24.5 12 19"
+  width="0.3"
+  height="3"
+  depth="0.5"
+  material="color: #000000">
+</a-box>
+
+<a-box
+  position="-25 12 18"
+  width="0.2"
+  height="3"
+  depth="2.2"
+  material="color: #ADD8E6; opacity: 0.6; transparent: true">
+</a-box>
+
+<!-- ===== FRONT WALL WITH WINDOW ===== -->
+<!-- Front Wall Left Section -->
+<a-box position="-12.5 5 -20"
+       width="25"
+       height="10.2"
+       depth="0.2"
+       material="src:#walltex; repeat: 6 15">
+</a-box>
+<a-box position="2.4 5 -20"
+       width="25"
+       height="10.2"
+       depth="0.2"
+       material="src:#walltex; repeat: 6 15">
+</a-box>
+
+
+
+<!-- Front Wall Right Section Below Window -->
+<a-box position="12.5 2 -20"
+       width="25"
+       height="7"
+       depth="0.2"
+       material="src:#walltex; repeat: 6 4">
+</a-box>
+
+<!-- Front Window Glass (Right Side) -->
+<a-box position="19.8 7.8 -20"
+       width="10"
+       height="4.5"
+       depth="0.1"
+       material="color: #87CEEB; opacity: 0.7; transparent: true">
+</a-box>
+<!-- ===== SIDE WALLS WITH OPENABLE DOORS (FIXED) ===== -->
+<a-box position="-2.5 15 9.2"
+       width="0.2"
+       height="10"
+       depth="14.6"
+       material="color: #ffffff">
+</a-box>
+<a-box position="-2 17.5 -8"
+       width="0.4"
+       height="5"
+       depth="22.5"
+       material="color: #ffffff">
+</a-box>
+<a-box position="-2.5 15 -11"
+       width="0.2"
+       height="10"
+       depth="14.6"
+       material="color: #ffffff">
+</a-box>
+
+<a-entity id="rightHinge" position="-2.5 12 0.9" rotation="0 0 0"
+          animation__open="property: rotation; to: 0 90 0; dur: 600; startEvents: openRight"
+          animation__close="property: rotation; to: 0 0 0; dur: 600; startEvents: closeRight">
+  <a-box id="rightDoor" position="-1 1 -0.5" width="3" height="6" depth="0.1" color="#8B4513"></a-box>
+</a-entity>
+
+<!-- Right side wall (faces +X) -->
+<a-box position="2.5 15 10"
+       width="0.2"
+       height="10"
+       depth="14.6"
+       material="color: #ffffff">
+</a-box>
+<a-box position="2.5 17.5 -8"
+       width="0.4"
+       height="5"
+       depth="22.5"
+       material="color: #ffffff">
+</a-box>
+
+<!-- Right door pivot (hinge) -->
+<a-entity id="rightHinge" position="3.5 12 0.9" rotation="0 0 0"
+          animation__open="property: rotation; to: 0 90 0; dur: 600; startEvents: openRight"
+          animation__close="property: rotation; to: 0 0 0; dur: 600; startEvents: closeRight">
+  <a-box id="rightDoor" position="-1 1 -0.5" width="3" height="6" depth="0.1" color="#8B4513"></a-box>
+</a-entity>
+<a-box position="2.5 15 -12"
+       width="0.2"
+       height="10"
+       depth="14.6"
+       material="color: #ffffff">
+</a-box>
+<a-entity
+  gltf-model="#wallart"
+  position="0 5 -19.7"
+  scale="5 5 5"
+   rotation="0 180 0">
+</a-entity>
+
+<!-- ===== BIG POOL IN FRONT ===== -->
+<!-- Pool floor (concrete) -->
+<a-box position="-40 -0.3 50"
+       width="30"
+       height="0.2"
+       depth="20"
+       material="color: #888888">
+</a-box>
+
+<!-- Pool water surface with animation -->
+<a-plane id="poolWater" position="-15 0.05 45"
+         rotation="-90 0 0"
+         width="29"
+         height="19"
+         material="color: #00BFFF; opacity: 0.8; transparent: true"
+         animation__bob="property: position; to: -15 0.15 45; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
+</a-plane>
+
+<!-- Pool walls - left side -->
+<a-box position="-30 1 45"
+       width="0.3"
+       height="2"
+       depth="19"
+       material="color: #4682B4">
+</a-box>
+
+<!-- Pool walls - right side -->
+<a-box position="0 1 45"
+       width="0.3"
+       height="2"
+       depth="19"
+       material="color: #4682B4">
+</a-box>
+
+<!-- Pool walls - front side -->
+<a-box position="-15 1 55"
+       width="30"
+       height="2"
+       depth="0.3"
+       material="color: #4682B4">
+</a-box>
+
+<!-- Pool walls - back side -->
+<a-box position="-15 1 35"
+       width="30"
+       height="2"
+       depth="0.3"
+       material="color: #4682B4">
+</a-box>
+
+<!-- Ripple effect using scaling animation on water -->
+<a-entity position="-15 0.05 45">
+  <a-plane position="0 0 0"
+           rotation="-90 0 0"
+           width="24"
+           height="16"
+           material="color: #00BFFF; opacity: 0.3; transparent: true"
+           animation="property: scale; from: 1 1 1; to: 1.3 1.3 1; dur: 3000; easing: easeInOutQuad; repeat: indefinite">
+  </a-plane>
+</a-entity>
+
+<!-- Door toggle script: listen on the door boxes and emit events on their hinge parents -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const leftDoor = document.querySelector('#leftDoor');
+    const rightDoor = document.querySelector('#rightDoor');
+    const leftHinge = document.querySelector('#leftHinge');
+    const rightHinge = document.querySelector('#rightHinge');
+    let leftOpen = false;
+    let rightOpen = false;
+
+    if (leftDoor && leftHinge) {
+      leftDoor.addEventListener('click', function (evt) {
+        leftHinge.emit(leftOpen ? 'closeLeft' : 'openLeft');
+        leftOpen = !leftOpen;
+      });
+      // make door respond to cursor hover
+      leftDoor.setAttribute('class', 'clickable');
+    }
+
+    if (rightDoor && rightHinge) {
+      rightDoor.addEventListener('click', function (evt) {
+        rightHinge.emit(rightOpen ? 'closeRight' : 'openRight');
+        rightOpen = !rightOpen;
+      });
+      rightDoor.setAttribute('class', 'clickable');
+    }
+  });
+</script>
+
+<!-- Q/E vertical movement component for cameras -->
+<script>
+  AFRAME.registerComponent('qe-controls', {
+    schema: { speed: { type: 'number', default: 3 } },
+    init: function () {
+      this.moveUp = false;
+      this.moveDown = false;
+      this.onKeyDown = this.onKeyDown.bind(this);
+      this.onKeyUp = this.onKeyUp.bind(this);
+      window.addEventListener('keydown', this.onKeyDown);
+      window.addEventListener('keyup', this.onKeyUp);
+    },
+    remove: function () {
+      window.removeEventListener('keydown', this.onKeyDown);
+      window.removeEventListener('keyup', this.onKeyUp);
+    },
+    onKeyDown: function (evt) {
+      if (evt.key === 'q' || evt.key === 'Q') this.moveUp = true;
+      if (evt.key === 'e' || evt.key === 'E') this.moveDown = true;
+    },
+    onKeyUp: function (evt) {
+      if (evt.key === 'q' || evt.key === 'Q') this.moveUp = false;
+      if (evt.key === 'e' || evt.key === 'E') this.moveDown = false;
+    },
+    tick: function (time, delta) {
+      if (!this.moveUp && !this.moveDown) return;
+      var el = this.el;
+      var pos = el.object3D.position;
+      var deltaSec = delta / 1000;
+      var speed = this.data.speed;
+      if (this.moveUp) pos.y += speed * deltaSec;
+      if (this.moveDown) pos.y -= speed * deltaSec;
+    }
+  });
+</script>
+
+<!-- ===== FENCE AROUND HOUSE ===== -->
+
+<!-- Left side fence -->
+<a-box position="-40 1.5 15"
+       width="0.3"
+       height="15"
+       depth="100"
+        material="src:#extwall; repeat:1 2">
+      </a-box>
+<a-box position="42 1.5 15"
+       width="0.3"
+       height="15"
+       depth="100"
+        material="src:#extwall; repeat: 1 2">
+      </a-box>
+
+<!-- Back fence -->
+<a-box position="1 1.5 -35"
+       width="83.5"
+       height="15"
+       depth="0.3"
+        material="src:#extwall; repeat: 1 2">
+</a-box>
+<a-box position="0 5 16.5"
+       width="50"
+       height="10"
+       depth="0.1"
+       material="color: #87CEEB; opacity: 0.7; transparent: true">
+</a-box>
+<a-box position="-22 1.5 65"
+       width="33"
+       height="15"
+       depth="0.3"
+        material="src:#extwall; repeat: 1 2">
+</a-box>
+<a-box position="24 1.5 65"
+       width="33"
+       height="15"
+       depth="0.3"
+        material="src:#extwall; repeat: 1 2">
+</a-box>
+
+
+
+
+
+
+</a-scene>
+</body>
+</html>
